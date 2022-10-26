@@ -1,0 +1,87 @@
+﻿@model Filter2RLC.Models.FilterParams
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+<hr id="line">
+<h3>Are you sure you want to delete this?</h3>
+
+
+<div class="row">
+    <div class="column">
+        <table id="create">
+            <caption>Saved values of the model of Filter</caption>
+            <tr>
+                <th id="header"> Parameter</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.Resistance1) </td>
+                <td>
+                    @Html.DisplayFor(model => model.Resistance1)
+                </td>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.Resistance2) </td>
+                <td>
+                    @Html.DisplayFor(model => model.Resistance2)
+                </td>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.Inductance) </td>
+                <td>
+                    @Html.DisplayFor(model => model.Inductance)
+                </td>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.Capacitance) </td>
+                <td>
+                    @Html.DisplayFor(model => model.Capacitance)
+                </td>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.U1) </td>
+                <td>
+                    @Html.DisplayFor(model => model.U1)
+                </td>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.Fmin) </td>
+                <td>
+                    @Html.DisplayFor(model => model.Fmin)
+                </td>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.Fmax) </td>
+                <td>
+                    @Html.DisplayFor(model => model.Fmax)
+                </td>
+            </tr>
+            <tr>
+                <td id="header"> @Html.DisplayNameFor(model => model.NumOfRows) </td>
+                <td>
+                    @Html.DisplayFor(model => model.NumOfRows)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="column">
+        <img src="~/Image/SchematRLC.png" alt="Block diagram" style="display:block; width:600px; height:auto; margin-left:auto; margin-right:auto" />
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" class="btn btn-default" id="smallbtn" />
+    </p>
+    <br />
+    <p>
+        <input type="button" class="myButton" value="Get me back to list" onclick="window.location='@Url.Action("Index", "FilterParams")'" />
+    </p>
+}
+

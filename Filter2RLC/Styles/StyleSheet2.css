@@ -1,0 +1,123 @@
+﻿body {
+    font: 18px Calibri, Times New Roman;
+    text-align: left;
+    width:100vw;
+    height:100vh;
+}
+
+th, td {
+    height: 50px;
+    border-bottom: solid #666666;
+}
+
+tr:hover {
+    background: #808080;
+}
+
+th {
+    background: #808080;
+}
+
+#line {
+    height: 5px;
+    background: #808080;
+    border: 0px;
+}
+
+#navbar {
+    background: #000000;
+}
+
+#pic {
+    box-shadow: 3px 3px 10px #7878c2, #808080 -3px 3px 10px, 3px -3px 10px;
+}
+
+#create {
+    position:center;
+    text-align: left;
+    width: 100%;
+}
+
+#index {
+    position: center;
+    width: 100%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.myButton {
+    background: #808080;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 19px;
+    padding: 12px 37px;
+    text-decoration: none;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #808080 5%, #7878c2 80%);
+    background-color: #ea00ff;
+}
+
+.myButton:active {
+     position: relative;
+     top: 1px;
+}
+
+.myButton2 {
+    width: 60px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Calibri;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.myButton2:hover {
+    background-color: #e9e9e9;
+}
+
+.myButton2:active {
+    position: relative;
+    top: 1px;
+}
+
+#smallbtn {
+    background: #808080;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+    #smallbtn:hover {
+        background: #808080;
+        background-color: #e9e9e9;
+    }
+
+#smallbtn:active {
+    position: relative;
+    top: 1px;
+}

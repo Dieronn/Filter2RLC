@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Filter2RLC.Models.FilterParams>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Choose or make new parameters of filter</h2>
+<hr id="line">
+<p>
+    <input type="button" class="myButton" value="Add new parameters" onclick="window.location='@Url.Action("Create", "FilterParams")'" />  
+</p>
+
+<img id="pic" src="~/Image/SchematRLC.png" alt="Block diagram" style="display:block; width:600px; height:auto; margin-left:auto; margin-right:auto" />
+
+<table id="index">
+    <caption>Saved parameters of filter</caption>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Resistance1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resistance2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inductance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacitance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.U1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fmin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fmax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOfRows)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resistance1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resistance2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inductance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacitance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.U1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fmin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fmax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumOfRows)
+            </td>
+            <td>
+                <input type="button" class="myButton2" value="Edit" onclick="window.location='@Url.Action("Edit", "FilterParams",new { id = item.ID })'" /><br>
+                <input type="button" class="myButton2" value="Details" onclick="window.location='@Url.Action("Details", "FilterParams",new { id = item.ID })'" /><br>
+                <input type="button" class="myButton2" value="Delete" onclick="window.location='@Url.Action("Delete", "FilterParams",new { id = item.ID })'" />                
+            </td>
+        </tr>
+    }
+
+</table>
+
